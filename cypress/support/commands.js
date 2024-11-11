@@ -10,7 +10,17 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('openPageAndAcceptCookies', () => {
+    cy.viewport(1920, 1080)
+     cy.visit('www.boozt.dk',{ failOnStatusCode: false });
+      cy.get('body').should('be.visible');
+      cy.url().should('include', 'boozt.com/dk/da');
+      cy.get('#onetrust-policy-text').should('be.visible');
+      cy.get('#onetrust-policy-text').click() //.scrollTo('bottom');
+      cy.get('#onetrust-accept-btn-handler').click();
+   
+     
+});
 //
 //
 // -- This is a child command --
