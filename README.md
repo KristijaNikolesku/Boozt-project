@@ -1,7 +1,7 @@
 # Boozt-project
 Automation test project using the cypress tool.
 
-Pre-requisites
+Pre-requisites:
 Install NodeJS and NPM pakcage manager.
 
 Note:
